@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Send Mail</title>
+
+</head>
+<body>
+
+	<form method="post" action="."> {% csrf_token %}
+
+		<input type="text" name="subject" value="subject"><br>
+		<textarea name='message'> Put your message here</textarea><br>
+		<textarea name="html_message"> Put your html message </textarea><br>
+		<input type="text" name="recipient_list" value="to1@gmail.com, to2@gmail.com,..."><br>
+
+		<input type="submit" value="Send">
+	</form>
+
+</body>
+</html>
